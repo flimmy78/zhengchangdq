@@ -1,0 +1,68 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="D:\CCStudio_v3.3\v131\erhaoji\zhengchangdq\zhengchangdq\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_Adc.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_ADC_cal.asm"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_CodeStartBranch.asm"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_CpuTimers.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_DefaultIsr.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_EPwm.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_MemCopy.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_PieCtrl.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_PieVect.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_Sci.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_SysCtrl.c"
+Source="basic unit for 28335\DSP2833x_common\source\DSP2833x_usDelay.asm"
+Source="basic unit for 28335\DSP2833x_headers\source\DSP2833x_GlobalVariableDefs.c"
+Source="basic unit for 28335\IQmath\lib\IQmath_fpu32.lib"
+Source="DC component elimination.c"
+Source="Decouple.c"
+Source="Filter.c"
+Source="Matrix.c"
+Source="PID.c"
+Source="PLL.c"
+Source="Project_Serial.c"
+Source="Sci_DJ.c"
+Source="SPWM&Scope.c"
+Source="SV_PWM.c"
+Source="Transformation.c"
+Source="Unbalanced control.c"
+Source="VSR_SG10K.c"
+Source="basic unit for 28335\DSP2833x_common\cmd\F28335.cmd"
+Source="basic unit for 28335\DSP2833x_headers\cmd\DSP2833x_Headers_nonBIOS.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -pdr -pdsw225 -fr"$(Proj_dir)\Debug" -i"D:\CCStudio_v3.3\v131\erhaoji\zhengchangdq\zhengchangdq\basic unit for 28335\DSP2833x_common\include" -i"D:\CCStudio_v3.3\v131\erhaoji\zhengchangdq\zhengchangdq\basic unit for 28335\DSP2833x_headers\include" -i"D:\CCStudio_v3.3\v131\erhaoji\zhengchangdq\zhengchangdq\basic unit for 28335\IQmath\include" -d"_DEBUG" -d"LARGE_MODEL" -ml -mt -v28 --float_support=fpu32
+
+["Compiler" Settings: "Release"]
+Options=-pdsw225 -o3 -fr"$(Proj_dir)\Release" -d"LARGE_MODEL" -ml -v28
+
+["Linker" Settings: "Debug"]
+Options=-q -c -ecode_start -heap0x800 -m".\Debug\LCL_VSR_unbalanced.map" -o".\Debug\LCL_VSR_unbalanced.out" -stack0x400 -w -x -i"D:\CCStudio_v3.3\v131\erhaoji\zhengchangdq\zhengchangdq\basic unit for 28335" -l"rts2800_fpu32.lib"
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\LCL_VSR_unbalanced.map" -o".\Release\LCL_VSR_unbalanced.out" -w -x
+
+["basic unit for 28335\DSP2833x_common\cmd\F28335.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["basic unit for 28335\DSP2833x_common\cmd\F28335.cmd" Settings: "Release"]
+LinkOrder=1
+
+["basic unit for 28335\DSP2833x_headers\cmd\DSP2833x_Headers_nonBIOS.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["basic unit for 28335\DSP2833x_headers\cmd\DSP2833x_Headers_nonBIOS.cmd" Settings: "Release"]
+LinkOrder=1
+
